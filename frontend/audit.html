@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audit | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="audit">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Administration</p>
+          <h1>Audit history</h1>
+          <p class="heading-copy">
+            Review who changed each record, when it changed, and the values before and after.
+          </p>
+        </div>
+        <button id="refreshAudit" class="button secondary">Refresh history</button>
+      </section>
+      <p class="form-note">
+        Snapshots show records as they existed when tracking started. Later changes are recorded
+        automatically. Passwords are excluded.
+      </p>
+      <section class="toolbar audit-filters">
+        <label
+          >Search<input
+            id="auditSearch"
+            type="search"
+            maxlength="100"
+            placeholder="Name, roll, registration, actor or record ID"
+        /></label>
+        <label
+          >Record type<select id="auditEntity">
+            <option value="">All records</option>
+            <option value="STUDENT">Members</option>
+            <option value="BOOK">Books</option>
+            <option value="AUTHOR">Authors</option>
+            <option value="CATEGORY">Categories</option>
+            <option value="ISSUE_BOOK">Loans</option>
+            <option value="RETURN_BOOK">Returns</option>
+            <option value="FINE">Fines</option>
+            <option value="BOOK_RESERVATION">Reservations</option>
+            <option value="LOGIN_USER">Accounts</option>
+            <option value="ADMIN">Admin profiles</option>
+          </select></label
+        >
+        <label
+          >Action<select id="auditAction">
+            <option value="">All actions</option>
+            <option value="INSERT">Created</option>
+            <option value="UPDATE">Updated</option>
+            <option value="DELETE">Deleted</option>
+            <option value="SNAPSHOT">Initial snapshot</option>
+          </select></label
+        >
+      </section>
+      <section class="surface">
+        <div class="table-wrap" id="auditTable" aria-live="polite"></div>
+      </section>
+      <div class="audit-pagination">
+        <span id="auditCount" class="record-count"></span>
+        <div class="row-actions">
+          <button id="auditPrevious" class="button secondary" disabled>Previous</button
+          ><button id="auditNext" class="button secondary" disabled>Next</button>
+        </div>
+      </div>
+    </main>
+    <div class="modal" id="auditDetail" aria-hidden="true">
+      <form class="audit-detail-form">
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Audit details</span>
+            <h2 id="auditDetailTitle">Record change</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <p id="auditDetailMeta" class="form-note"></p>
+        <div class="table-wrap" id="auditValues"></div>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Close</button>
+        </div>
+      </form>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/audit.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Members | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="students">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Membership</p>
+          <h1>Student directory</h1>
+          <p class="heading-copy">Register members and control borrowing access.</p>
+        </div>
+        <button class="button primary" data-open="studentModal">Add member</button>
+      </section>
+      <section class="toolbar">
+        <label class="search-field"
+          ><span>Find member</span
+          ><input
+            id="studentSearch"
+            type="search"
+            placeholder="ID, roll, registration, name, phone or email" /></label
+        ><span class="record-count" id="studentCount"></span>
+      </section>
+      <section class="surface"><div class="table-wrap" id="studentTable"></div></section>
+    </main>
+    <div class="modal" id="studentModal" aria-hidden="true">
+      <form data-kind="student">
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Membership</span>
+            <h2>Add library member</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <p class="form-note">
+          A library member ID is generated automatically. ID/Roll and Registration No. must each be
+          unique.
+        </p>
+        <label
+          >ID / Roll number<input
+            name="roll_no"
+            maxlength="40"
+            pattern="[A-Za-z0-9][A-Za-z0-9.\/_\-]{0,39}"
+            placeholder="e.g. 2201001"
+            required
+        /></label>
+        <label
+          >Registration No.<input
+            name="registration_no"
+            maxlength="40"
+            pattern="[A-Za-z0-9][A-Za-z0-9.\/_\-]{0,39}"
+            placeholder="e.g. 2022-00123"
+            required
+        /></label>
+        <label
+          >Academic session<input
+            name="academic_session"
+            maxlength="9"
+            pattern="[0-9]{4}-([0-9]{2}|[0-9]{4})"
+            title="Use 2023-24 or 2023-2024"
+            placeholder="2023-24"
+            required
+        /></label>
+        <label>Name<input name="name" required /></label
+        ><label>Department<input name="department" required /></label
+        ><label
+          >Phone number<input
+            name="phone"
+            type="tel"
+            inputmode="numeric"
+            minlength="11"
+            maxlength="11"
+            pattern="[0-9]{11}"
+            placeholder="01XXXXXXXXX"
+            required /></label
+        ><label>Email<input name="email" type="email" required /></label>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button primary">Save member</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="identityModal" aria-hidden="true">
+      <form>
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Membership</span>
+            <h2>Edit member</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <p class="form-note" id="identityMember"></p>
+        <input name="student_id" type="hidden" />
+        <label
+          >ID / Roll number<input
+            name="roll_no"
+            maxlength="40"
+            pattern="[A-Za-z0-9][A-Za-z0-9.\/_\-]{0,39}"
+            required
+        /></label>
+        <label
+          >Registration No.<input
+            name="registration_no"
+            maxlength="40"
+            pattern="[A-Za-z0-9][A-Za-z0-9.\/_\-]{0,39}"
+            required
+        /></label>
+        <label
+          >Academic session<input
+            name="academic_session"
+            maxlength="9"
+            pattern="[0-9]{4}-([0-9]{2}|[0-9]{4})"
+            title="Use 2023-24 or 2023-2024"
+            placeholder="2023-24"
+            required
+        /></label>
+        <label>Name<input name="name" maxlength="100" required /></label>
+        <label>Department<input name="department" maxlength="100" required /></label>
+        <label
+          >Phone number<input
+            name="phone"
+            type="tel"
+            inputmode="numeric"
+            minlength="11"
+            maxlength="11"
+            pattern="[0-9]{11}"
+            required
+        /></label>
+        <label>Email<input name="email" type="email" maxlength="100" required /></label>
+        <label
+          >Membership status<select name="membership_status">
+            <option value="ACTIVE">Active</option>
+            <option value="DISABLED">Disabled</option>
+          </select></label
+        >
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/students.js?v=session-1"></script>
+  </body>
+</html>

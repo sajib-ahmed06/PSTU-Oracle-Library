@@ -1,0 +1,14 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+database/backups/
+
+/tmp/member-dashboard/
+/tmp/refactor-backup/
+/tmp/refactor-tools/
+/tmp/refactor-*.py
+node_modules/
+tmp/

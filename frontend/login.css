@@ -1,0 +1,314 @@
+/* A translucent sign-in card keeps the campus photograph visible. */
+:root {
+  --green: #0b4a37;
+  --ink: #fff;
+  --muted: #e1ebe7;
+  --line: rgba(255, 255, 255, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #123c30;
+  background-image:
+    linear-gradient(90deg, rgba(4, 24, 19, 0.64), rgba(4, 24, 19, 0.12)),
+    url("/static/assets/pstu-library.jpg"), url("/static/assets/library-dashboard.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+button,
+input {
+  font: inherit;
+}
+.login-screen {
+  flex: 1;
+  width: min(1400px, 100%);
+  margin: auto;
+  padding: clamp(28px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 100px);
+}
+.login-brand {
+  padding: 20px 0;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+.brand-badge {
+  width: 82px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.login-brand p {
+  max-width: 500px;
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.login-brand h1 {
+  margin: 0;
+  font-size: clamp(36px, 4.4vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+.login-brand > span {
+  display: block;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.login-panel {
+  padding: clamp(28px, 3vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.09)),
+    rgba(8, 36, 28, 0.42);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+}
+.login-panel form {
+  width: 100%;
+}
+.form-heading {
+  margin-bottom: 28px;
+}
+.form-heading > span {
+  color: #c6f7de;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.form-heading h2 {
+  margin: 10px 0;
+  font-size: 32px;
+  letter-spacing: -0.7px;
+}
+.form-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+label {
+  display: block;
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+input {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 9px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  outline: none;
+}
+input::placeholder {
+  color: #d5e1db;
+  font-size: 12px;
+  opacity: 1;
+}
+input:focus {
+  border-color: #b5f4d2;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(181, 244, 210, 0.18);
+}
+.password-field {
+  position: relative;
+  display: block;
+}
+.password-field input {
+  padding-right: 66px;
+}
+.password-field button {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  min-height: 32px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #0b4a37;
+  color: #fff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+.login-error {
+  min-height: 20px;
+  margin: 4px 0 10px;
+  color: #ffe0d8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.login-button {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 11px;
+  background: #0b4a37;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.login-button:hover {
+  background: #083e2e;
+}
+.login-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+button:focus-visible {
+  outline: 3px solid #b5f4d2;
+  outline-offset: 3px;
+}
+.secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.secure-note i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9bf0bc;
+  box-shadow: 0 0 0 4px rgba(155, 240, 188, 0.12);
+}
+.account-link {
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+  margin: 18px 0 0;
+}
+.account-link a {
+  color: #c6f7de;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+.account-link a:focus-visible {
+  outline: 3px solid #b5f4d2;
+  outline-offset: 4px;
+}
+footer {
+  min-height: 54px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 16px;
+  background: rgba(4, 24, 19, 0.4);
+  color: #e1ebe7;
+  font-size: 10px;
+  text-align: center;
+}
+footer strong {
+  color: #c6f7de;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 850px) {
+  body {
+    background-attachment: scroll;
+  }
+  .login-screen {
+    max-width: 560px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+  .login-brand {
+    padding: 0;
+  }
+  .brand-badge {
+    margin-bottom: 18px;
+  }
+  .login-brand h1 {
+    font-size: 38px;
+  }
+  .login-brand > span {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 430px) {
+  .login-screen {
+    padding: 24px 18px;
+  }
+  .login-brand h1 {
+    font-size: 32px;
+  }
+  .login-brand p {
+    font-size: 10px;
+  }
+  .login-panel {
+    padding: 26px 22px;
+    border-radius: 20px;
+  }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .login-panel {
+    background: rgba(8, 36, 28, 0.88);
+  }
+}
+
+/* Saved credentials must stay legible against the glass surface. */
+input:autofill {
+  color: #fff;
+  background: #29493e;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #29493e inset;
+}
+@media (max-height: 650px) and (min-width: 851px) {
+  .login-screen {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .login-panel {
+    padding: 26px 32px;
+  }
+  .form-heading {
+    margin-bottom: 18px;
+  }
+}

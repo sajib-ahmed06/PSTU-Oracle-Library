@@ -1,0 +1,28 @@
+-- PSTU Library: fresh schema and sample data.
+-- Run through Setup-Database.bat; this script resets the project tables.
+
+SET DEFINE OFF;
+SET SERVEROUTPUT ON;
+WHENEVER OSERROR EXIT FAILURE;
+WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK;
+
+BEGIN
+  FOR scheduled_job IN (SELECT job FROM user_jobs WHERE what='expire_reservations_proc;') LOOP
+    DBMS_JOB.REMOVE(scheduled_job.job);
+  END LOOP;
+  FOR object_name IN (SELECT object_name, object_type FROM user_objects
+    WHERE object_name IN ('AUDIT_JSON_VALUE','RETURN_BOOK_PROC','CHECK_BOOK_AVAILABLE','BOOK_DETAILS','RETURN_QUANTITY_TRIGGER','ISSUE_QUANTITY_TRIGGER','LOGIN_TRIGGER','RETURN_TRIGGER','ISSUE_TRIGGER','BOOK_TRIGGER','CATEGORY_TRIGGER','AUTHOR_TRIGGER','STUDENT_TRIGGER','ADMIN_TRIGGER')) LOOP
+    BEGIN
+      EXECUTE IMMEDIATE 'DROP ' || object_name.object_type || ' ' || object_name.object_name;
+    EXCEPTION WHEN OTHERS THEN NULL;
+    END;
+  END LOOP;
+  FOR table_name IN (SELECT table_name FROM user_tables WHERE table_name IN ('REMINDER_DELIVERY','BOOK_RESERVATION','FINE_PAYMENT','BOOK_COPY','AUDIT_LOG','FINE','RETURN_BOOK','ISSUE_BOOK','BOOK','CATEGORY','AUTHOR','LOGIN_USER','STUDENT','ADMIN')) LOOP
+    EXECUTE IMMEDIATE 'DROP TABLE ' || table_name.table_name || ' CASCADE CONSTRAINTS';
+  END LOOP;
+  FOR sequence_name IN (SELECT sequence_name FROM user_sequences WHERE sequence_name IN ('RESERVATION_SEQ','PAYMENT_SEQ','COPY_SEQ','AUDIT_SEQ','FINE_SEQ','RETURN_SEQ','ISSUE_SEQ','BOOK_SEQ','CATEGORY_SEQ','AUTHOR_SEQ','LOGIN_SEQ','STUDENT_SEQ','ADMIN_SEQ')) LOOP
+    EXECUTE IMMEDIATE 'DROP SEQUENCE ' || sequence_name.sequence_name;
+  END LOOP;
+END;
+/
+

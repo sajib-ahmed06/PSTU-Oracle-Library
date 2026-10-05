@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accounts | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="accounts">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Administration</p>
+          <h1>Account management</h1>
+          <p class="heading-copy">
+            Create librarian access and maintain administrator credentials.
+          </p>
+        </div>
+      </section>
+
+      <section class="account-grid">
+        <article class="surface account-list-panel">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">Authorized users</span>
+              <h2>Management accounts</h2>
+            </div>
+            <span class="record-count" id="accountCount"></span>
+          </div>
+          <div class="table-wrap" id="accountTable"></div>
+        </article>
+
+        <article class="surface form-surface">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">New access</span>
+              <h2>Create librarian</h2>
+            </div>
+          </div>
+          <form id="librarianForm" class="account-form">
+            <label
+              >Username<input
+                name="username"
+                minlength="3"
+                maxlength="30"
+                pattern="[A-Za-z][A-Za-z0-9_]{2,29}"
+                placeholder="Example: librarian01"
+                required
+            /></label>
+            <label
+              >Password<input
+                name="password"
+                type="password"
+                minlength="4"
+                autocomplete="new-password"
+                required
+            /></label>
+            <label
+              >Confirm password<input
+                name="confirmPassword"
+                type="password"
+                minlength="4"
+                autocomplete="new-password"
+                required
+            /></label>
+            <button class="button primary">Create librarian account</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="surface credentials-surface">
+        <div class="surface-heading">
+          <div>
+            <span class="section-label">Administrator security</span>
+            <h2>Change my username and password</h2>
+          </div>
+        </div>
+        <form id="credentialsForm" class="account-form horizontal-form">
+          <label
+            >Current password<input
+              name="currentPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+          /></label>
+          <label
+            >New username<input
+              name="newUsername"
+              minlength="3"
+              maxlength="30"
+              pattern="[A-Za-z][A-Za-z0-9_]{2,29}"
+              required
+          /></label>
+          <label
+            >New password<input
+              name="newPassword"
+              type="password"
+              minlength="4"
+              autocomplete="new-password"
+              required
+          /></label>
+          <label
+            >Confirm new password<input
+              name="confirmPassword"
+              type="password"
+              minlength="4"
+              autocomplete="new-password"
+              required
+          /></label>
+          <button class="button primary">Update credentials</button>
+        </form>
+      </section>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/accounts.js"></script>
+  </body>
+</html>

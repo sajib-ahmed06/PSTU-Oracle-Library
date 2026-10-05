@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+    <link rel="stylesheet" href="/static/admin.css?v=details-2" />
+  </head>
+  <body data-page="overview">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="admin-heading">
+        <div>
+          <p class="eyebrow">LIBRARY OPERATIONS</p>
+          <h1>Management overview</h1>
+          <p>Everything you need to keep the library moving.</p>
+        </div>
+        <div class="admin-heading-tools">
+          <span id="today" class="current-date"></span
+          ><button id="refreshButton" class="button secondary">Refresh data</button>
+        </div>
+      </section>
+      <section class="admin-welcome">
+        <div>
+          <span class="cover-label">THE LIBRARY, IN FOCUS</span>
+          <h2>A well-run library.<br />A better reading experience.</h2>
+          <p>Manage your collection, support members, and stay ahead of upcoming returns.</p>
+          <a class="button light" href="/circulation?new=1">Issue a book &rarr;</a>
+        </div>
+        <span class="admin-cover-note">PSTU Central Library</span>
+      </section>
+      <nav class="admin-shortcuts" aria-label="Quick library actions">
+        <a href="/circulation?new=1"
+          ><span class="shortcut-mark">01</span
+          ><span><strong>Issue &amp; return</strong><small>Manage borrowing</small></span
+          ><b>&nearr;</b></a
+        ><a href="/books?new=1"
+          ><span class="shortcut-mark">02</span
+          ><span><strong>Manage collection</strong><small>Add books or stock</small></span
+          ><b>&nearr;</b></a
+        ><a href="/students?new=1"
+          ><span class="shortcut-mark">03</span
+          ><span><strong>Member services</strong><small>Register or update members</small></span
+          ><b>&nearr;</b></a
+        ><a href="/reservations"
+          ><span class="shortcut-mark">04</span
+          ><span><strong>Reservations</strong><small>Prepare reserved pickups</small></span
+          ><b>&nearr;</b></a
+        >
+      </nav>
+      <div class="dashboard-section-heading">
+        <div>
+          <span class="section-label">AT A GLANCE</span>
+          <h2>Library performance</h2>
+        </div>
+        <span>Current collection and circulation</span>
+      </div>
+      <section class="metric-grid" id="stats" aria-label="Library summary"></section>
+      <section class="desk-priorities">
+        <div class="dashboard-section-heading">
+          <div>
+            <span class="section-label">DESK PRIORITIES</span>
+            <h2>What needs attention</h2>
+          </div>
+          <span>Keep today's work in view</span>
+        </div>
+        <div id="deskPriorities" class="priority-grid"></div>
+      </section>
+      <section
+        class="dashboard-grid attention-details"
+        aria-label="Return reminders and fine details"
+      >
+        <article class="surface" id="dueSoonDetails">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">3-DAY REMINDERS</span>
+              <h2>Upcoming return dates</h2>
+              <p id="dueSoonCount"></p>
+            </div>
+            <a class="text-link" href="/circulation">View all loans</a>
+          </div>
+          <div id="dueSoonTable" class="table-wrap"></div>
+        </article>
+        <article class="surface">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">FINES &amp; OVERDUE</span>
+              <h2>Members with outstanding fines</h2>
+              <p id="fineAttentionTotal"></p>
+            </div>
+            <a class="text-link" href="/fines">View fines</a>
+          </div>
+          <div id="fineAttentionTable" class="table-wrap"></div>
+          <p class="fine-estimate-note">
+            Overdue amounts are estimates for today. The final fine is recorded when the book is
+            returned.
+          </p>
+        </article>
+      </section>
+      <div class="dashboard-section-heading">
+        <div>
+          <span class="section-label">CIRCULATION &amp; COLLECTION</span>
+          <h2>Daily activity</h2>
+        </div>
+      </div>
+      <section class="dashboard-grid">
+        <article class="surface activity-surface">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">PRIORITY ACTIONS</span>
+              <h2>Circulation action queue</h2>
+            </div>
+            <a class="text-link" href="/circulation">View register</a>
+          </div>
+          <div class="table-wrap" id="recentTable"></div>
+        </article>
+        <aside class="surface health-surface">
+          <div class="surface-heading">
+            <div>
+              <span class="section-label">Collection health</span>
+              <h2>Inventory status</h2>
+            </div>
+          </div>
+          <div id="inventorySnapshot"></div>
+        </aside>
+      </section>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/dashboard.js?v=priority-3"></script>
+  </body>
+</html>

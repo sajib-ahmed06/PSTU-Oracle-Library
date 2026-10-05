@@ -1,0 +1,212 @@
+.notification-center {
+  position: relative;
+  flex-shrink: 0;
+}
+.notification-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d5e3db;
+  border-radius: 14px;
+  background: #f3f8f4;
+  color: #14573f;
+  cursor: pointer;
+}
+.notification-button:hover {
+  background: #e5f1e9;
+}
+.notification-button svg {
+  width: 22px;
+  height: 22px;
+}
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 20px;
+  padding: 2px 5px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: #bd3a2e;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+.notification-panel {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: min(420px, calc(100vw - 32px));
+  border: 1px solid #dbe7df;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 22px 65px #133a2929;
+  z-index: 100;
+  overflow: hidden;
+  text-align: left;
+}
+.notification-panel[hidden],
+.notification-badge[hidden] {
+  display: none;
+}
+.notification-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px 12px;
+}
+.notification-heading h2 {
+  margin: 0;
+  color: #163e2e;
+  font-size: 20px;
+}
+.notification-heading p {
+  margin: 5px 0 0;
+  color: #65776c;
+  font-size: 12px;
+}
+.notification-close {
+  border: 0;
+  background: #f0f5f1;
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  color: #476353;
+  cursor: pointer;
+  font-size: 22px;
+}
+.notification-controls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid #e9eee9;
+}
+.notification-controls button {
+  border: 0;
+  background: transparent;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: #65776c;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.notification-controls button[aria-pressed="true"] {
+  background: #e9f3ec;
+  color: #14573f;
+}
+.notification-controls #notificationReadAll {
+  margin-left: auto;
+  color: #14573f;
+}
+.notification-controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.notification-list {
+  max-height: min(420px, 60vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.notification-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  color: #263f30;
+  text-decoration: none;
+  border-bottom: 1px solid #eef2ef;
+}
+.notification-item:hover {
+  background: #f3f8f4;
+}
+.notification-item.is-unread {
+  background: #f7fbf8;
+}
+.notification-symbol {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 12px;
+  background: #dfeee4;
+  color: #14573f;
+  font-weight: 800;
+}
+.notification-symbol.fine {
+  background: #fff0db;
+  color: #925908;
+  font-size: 21px;
+}
+.notification-symbol.due {
+  background: #e5edf9;
+  color: #315f9a;
+}
+.notification-copy {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.notification-copy strong {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.notification-copy span {
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.notification-copy small {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #6c7b70;
+}
+.notification-unread-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  margin: 6px 0 0 auto;
+  border-radius: 50%;
+  background: #16835c;
+}
+.is-read .notification-unread-dot {
+  visibility: hidden;
+}
+.notification-empty {
+  display: grid;
+  gap: 8px;
+  padding: 36px 20px;
+  text-align: center;
+  color: #3e5c48;
+}
+.notification-empty span {
+  font-size: 13px;
+  color: #6c7b70;
+}
+.notification-freshness {
+  margin: 0;
+  padding: 12px 16px;
+  background: #f4f7f4;
+  font-size: 11px;
+  color: #697c6e;
+}
+.notification-button:focus-visible,
+.notification-panel button:focus-visible,
+.notification-item:focus-visible {
+  outline: 3px solid #85b69a;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .notification-panel {
+    position: fixed;
+    top: 110px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}

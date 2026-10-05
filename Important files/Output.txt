@@ -1,0 +1,25 @@
+SQLPlus-এ query চালানোর নিয়ম:
+1. Start menu থেকে SQL Plus খুলে login করো:
+   - Username: configured_schema
+   - Password:<private-database-password>
+   - Host String: XE
+   Fresh setup-এর default password হলো <private-database-password>।
+2. Login হলে SQL> লেখা দেখাবে। Output সুন্দরভাবে দেখতে আগে এগুলো দাও:
+SET LINESIZE 250
+SET PAGESIZE 100
+COLUMN name FORMAT A25
+COLUMN title FORMAT A35
+COLUMN author_name FORMAT A25
+COLUMN academic_session FORMAT A16
+3. তারপর query paste করে Enter চাপো। যেমন member দেখতে:
+SELECT student_id, name, roll_no, registration_no,
+       academic_session, membership_status
+FROM student
+ORDER BY student_id;
+বই দেখতে:
+SELECT b.book_id, b.title, a.author_name,
+       b.publisher, b.quantity, b.available_quantity
+FROM book b
+JOIN author a ON a.author_id = b.author_id
+ORDER BY b.book_id DESC;
+Query-এর শেষে ; দিলে output নিচেই table আকারে দেখাবে। no rows selected মানে ওই query অনুযায়ী কোনো record পাওয়া যায়নি।

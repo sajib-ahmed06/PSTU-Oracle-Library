@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fines | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="fines">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Accounts</p>
+          <h1>Fine register</h1>
+          <p class="heading-copy">
+            Review overdue books, return them, and track all outstanding fines.
+          </p>
+        </div>
+        <button id="refreshButton" class="button secondary">Refresh data</button>
+      </section>
+      <section class="metric-grid compact" id="fineSummary"></section>
+      <section class="toolbar">
+        <div>
+          <strong>Fine collection</strong>
+          <p class="form-note">
+            Total includes all recorded payments. Today and this month use dated receipts in
+            Asia/Dhaka.
+          </p>
+        </div>
+      </section>
+      <section
+        class="metric-grid compact"
+        id="fineCollection"
+        aria-label="Fine collection totals"
+        aria-live="polite"
+      ></section>
+      <section class="toolbar">
+        <div>
+          <strong>Overdue books awaiting return</strong>
+          <p class="form-note">
+            Fine grows by Tk 10 per overdue day. Returning the book records the final fine below.
+          </p>
+        </div>
+        <span class="record-count" id="overdueTotal"></span>
+      </section>
+      <section class="surface"><div class="table-wrap" id="overdueTable"></div></section>
+      <section class="toolbar">
+        <strong>Returns and payment history</strong
+        ><span class="record-count" id="fineTotal"></span>
+      </section>
+      <section class="surface"><div class="table-wrap" id="fineTable"></div></section>
+    </main>
+    <div class="modal" id="paymentModal" aria-hidden="true">
+      <form>
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Fine payment</span>
+            <h2>Pay full fine</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <p id="paymentBalance" class="form-note"></p>
+        <input type="hidden" name="fineId" />
+        <label
+          >Note / reason (optional)<input
+            name="note"
+            maxlength="300"
+            placeholder="Payment reference"
+        /></label>
+        <p class="form-note">The full outstanding balance will be paid in one payment.</p>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button primary">Pay full fine</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="paymentHistoryModal" aria-hidden="true">
+      <form>
+        <div class="modal-heading">
+          <h2>Payment receipts</h2>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <div id="paymentHistory"></div>
+      </form>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/fines.js?v=collection-1"></script>
+  </body>
+</html>

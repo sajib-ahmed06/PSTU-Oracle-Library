@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Books | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="books">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Collection</p>
+          <h1>Book inventory</h1>
+          <p class="heading-copy">Manage titles and physical stock from one register.</p>
+        </div>
+        <button class="button primary" data-open="bookModal">Add or restock</button>
+      </section>
+      <section class="toolbar">
+        <label class="search-field"
+          ><span>Search books</span
+          ><input id="bookSearch" type="search" placeholder="Title, author or category" /></label
+        ><span class="record-count" id="bookCount"></span>
+      </section>
+      <section class="surface"><div class="table-wrap" id="bookTable"></div></section>
+    </main>
+    <div class="modal" id="bookModal" aria-hidden="true">
+      <form data-kind="book">
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Inventory</span>
+            <h2>Add or restock book</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <label>Title<input name="title" required /></label
+        ><label
+          >Author<input
+            name="author"
+            list="authorOptions"
+            placeholder="Type an author name"
+            required /><datalist id="authorOptions"></datalist></label
+        ><label
+          >Category<input
+            name="category"
+            list="categoryOptions"
+            placeholder="Type a category"
+            required /><datalist id="categoryOptions"></datalist></label
+        ><label>Publisher<input name="publisher" value="PSTU Library" /></label
+        ><label
+          >Copies to add<input name="quantity" type="number" value="1" min="1" required
+        /></label>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button primary">Save stock</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="reduceStockModal" aria-hidden="true">
+      <form data-kind="reduceStock">
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">Inventory adjustment</span>
+            <h2>Reduce stock</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <p class="form-note" id="reduceStockBook"></p>
+        <input name="bookId" type="hidden" /><label
+          >Lost or damaged copies<input name="quantity" type="number" value="1" min="1" required
+        /></label>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button danger">Reduce stock</button>
+        </div>
+      </form>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/books.js"></script>
+  </body>
+</html>

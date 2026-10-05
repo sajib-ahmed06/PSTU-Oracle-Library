@@ -1,0 +1,835 @@
+{
+  "snapshot_date": "2026-10-04",
+  "source_files": [
+    {
+      "path": ".env.example",
+      "lines": 21,
+      "bytes": 521,
+      "sha256": "c2f0da94f96f35f85d66863e844560cfd95a478cf5696dae40bff4f4797378b8",
+      "guide": "code/.env.example.md"
+    },
+    {
+      "path": ".gitignore",
+      "lines": 14,
+      "bytes": 178,
+      "sha256": "5e5f40b3e05020dbd5b03d6be3102cd52354d56b7c54330efac065fc278fac43",
+      "guide": "code/.gitignore.md"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "lines": 8,
+      "bytes": 321,
+      "sha256": "14815597461686b9ab33cd5c49629f15d88d44c9e4054273ebd5b2cb3224d1ec",
+      "guide": "code/.vscode__settings.json.md"
+    },
+    {
+      "path": "Open-Library-Project.bat",
+      "lines": 14,
+      "bytes": 323,
+      "sha256": "3dbdf5850c68c577787db56db57b02a7bd7480d0066ee606fb5589a08d9dee03",
+      "guide": "code/Open-Library-Project.bat.md"
+    },
+    {
+      "path": "README.md",
+      "lines": 126,
+      "bytes": 14659,
+      "sha256": "6fbe2976b95bd64017970d68e176aee05d03adb9277cd86baa974252f0a9a5e0",
+      "guide": "code/README.md.md"
+    },
+    {
+      "path": "Setup-Database.bat",
+      "lines": 13,
+      "bytes": 222,
+      "sha256": "d1b058a211b1aef5d113c202c575f81b81a34b21f7770baac4ef593648c2f3fc",
+      "guide": "code/Setup-Database.bat.md"
+    },
+    {
+      "path": "backend/audit.py",
+      "lines": 5,
+      "bytes": 167,
+      "sha256": "5a53bfabaa6bef37a128da6af0d500e56f4981114c5252cf1af6301c4d5175b2",
+      "guide": "code/backend__audit.py.md"
+    },
+    {
+      "path": "backend/auth/__init__.py",
+      "lines": 9,
+      "bytes": 234,
+      "sha256": "cfd2785bc2f543243d80c331bd149cdcc9e7810c767b32064ec288719fdab9dd",
+      "guide": "code/backend__auth____init__.py.md"
+    },
+    {
+      "path": "backend/auth/member_access.py",
+      "lines": 106,
+      "bytes": 4373,
+      "sha256": "2a4d8985fce4c19117a33321a775107d803cf84a7a0402a2bb0424a3fb9ab0ce",
+      "guide": "code/backend__auth__member_access.py.md"
+    },
+    {
+      "path": "backend/auth/passwords.py",
+      "lines": 31,
+      "bytes": 1093,
+      "sha256": "ab0c9e791caaa38874fd7fa97d0f348406a18315c5353a45bdce86b779d27e12",
+      "guide": "code/backend__auth__passwords.py.md"
+    },
+    {
+      "path": "backend/auth/routes.py",
+      "lines": 222,
+      "bytes": 9314,
+      "sha256": "bd3597e13d153ea86ffbb3831117fc6601483112343200efa51bda3283791b4e",
+      "guide": "code/backend__auth__routes.py.md"
+    },
+    {
+      "path": "backend/auth/session.py",
+      "lines": 115,
+      "bytes": 4056,
+      "sha256": "28428a73e181ed547080d07aacdfba6c0782404e51deec6870af614c21d07a67",
+      "guide": "code/backend__auth__session.py.md"
+    },
+    {
+      "path": "backend/auth/validation.py",
+      "lines": 24,
+      "bytes": 805,
+      "sha256": "9487ba5388cbd8c813df988d98cdf0b8cd3c48e9209b90d93034a77e560a869b",
+      "guide": "code/backend__auth__validation.py.md"
+    },
+    {
+      "path": "backend/database.py",
+      "lines": 222,
+      "bytes": 8942,
+      "sha256": "47336a2f21c3f2a875f2510dbffd6d2c69d31fa8fc80a9ff260b273fc6fc9898",
+      "guide": "code/backend__database.py.md"
+    },
+    {
+      "path": "backend/main.py",
+      "lines": 73,
+      "bytes": 1982,
+      "sha256": "3d62b2ca94bba8860f5aeff35d078131fbd4a13e8c2dd22089d1dd0075b3cd07",
+      "guide": "code/backend__main.py.md"
+    },
+    {
+      "path": "backend/oracle_config/sqlnet.ora",
+      "lines": 2,
+      "bytes": 41,
+      "sha256": "df6d2c8243cd890874b46e55422d9ffa8cb0999a9f5597e08825a09529fbad23",
+      "guide": "code/backend__oracle_config__sqlnet.ora.md"
+    },
+    {
+      "path": "backend/oracle_config/tnsnames.ora",
+      "lines": 9,
+      "bytes": 170,
+      "sha256": "3b3af93f12d5024b2566ecc241c5e36e3ffbd5863921e426d7f18468603e751d",
+      "guide": "code/backend__oracle_config__tnsnames.ora.md"
+    },
+    {
+      "path": "backend/reminders/__init__.py",
+      "lines": 1,
+      "bytes": 64,
+      "sha256": "52ba7b19882375d526bb5052419436336b8c1465c3a56117b9a3ca9860ae688e",
+      "guide": "code/backend__reminders____init__.py.md"
+    },
+    {
+      "path": "backend/reminders/messages.py",
+      "lines": 51,
+      "bytes": 2436,
+      "sha256": "2a9afff1aad7bded85d580a42808d83e66b44f3b2a8264d1626ab99d4bd859cb",
+      "guide": "code/backend__reminders__messages.py.md"
+    },
+    {
+      "path": "backend/reminders/providers.py",
+      "lines": 85,
+      "bytes": 3164,
+      "sha256": "f08a5f3eb8a57446cad185171b88d66cb64834542ba679ab118733b90b89e501",
+      "guide": "code/backend__reminders__providers.py.md"
+    },
+    {
+      "path": "backend/reminders/store.py",
+      "lines": 63,
+      "bytes": 2682,
+      "sha256": "7dd34b6a25e745ab1dc75a0963603678dbc3cb0b28244eca40bdee2190d22171",
+      "guide": "code/backend__reminders__store.py.md"
+    },
+    {
+      "path": "backend/reminders/worker.py",
+      "lines": 115,
+      "bytes": 4140,
+      "sha256": "2b27861576a7fa9b726dba53c5a8d700e537b25abbcc903fecc9e9716dce0bae",
+      "guide": "code/backend__reminders__worker.py.md"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "lines": 2,
+      "bytes": 16,
+      "sha256": "e9af2913de609d1de45b2fbab270c5a77281543c4dab6d1dd182f221fd04f683",
+      "guide": "code/backend__requirements.txt.md"
+    },
+    {
+      "path": "backend/reservations.py",
+      "lines": 188,
+      "bytes": 8314,
+      "sha256": "146eb8a49866412f67ee0c8d8eaf5c8e95c296070f3eac049baeafdf4a29bd6f",
+      "guide": "code/backend__reservations.py.md"
+    },
+    {
+      "path": "backend/routes/__init__.py",
+      "lines": 1,
+      "bytes": 61,
+      "sha256": "b7e56d008ee7ef08ad6237ba6094027d9e4e2db9ed0049edea8d7a5a82d5e45d",
+      "guide": "code/backend__routes____init__.py.md"
+    },
+    {
+      "path": "backend/routes/audit.py",
+      "lines": 69,
+      "bytes": 2745,
+      "sha256": "12cd74e9858f078c124b3fc0a2eba31944dfb0fff5729332d136646d85760ffe",
+      "guide": "code/backend__routes__audit.py.md"
+    },
+    {
+      "path": "backend/routes/books.py",
+      "lines": 136,
+      "bytes": 4713,
+      "sha256": "a25f291f4780508dcf54968730cdbe3c9f697ffbffa40ba76aff0cd74752b986",
+      "guide": "code/backend__routes__books.py.md"
+    },
+    {
+      "path": "backend/routes/circulation.py",
+      "lines": 69,
+      "bytes": 2880,
+      "sha256": "20bd7fd01fc8dd2a02c8e17420d978d4eead2fe9d26e158adbbd21b45d0346a4",
+      "guide": "code/backend__routes__circulation.py.md"
+    },
+    {
+      "path": "backend/routes/fines.py",
+      "lines": 80,
+      "bytes": 3127,
+      "sha256": "9fd94fad072138b19ff5ec28aaa89fe2752ec967e75a79148ff5c51488ab3bb1",
+      "guide": "code/backend__routes__fines.py.md"
+    },
+    {
+      "path": "backend/routes/members.py",
+      "lines": 176,
+      "bytes": 5926,
+      "sha256": "a2c06f9f84df2d07743464e129ca810d508d87d5e2f159a8e03d043dc19fb94c",
+      "guide": "code/backend__routes__members.py.md"
+    },
+    {
+      "path": "backend/routes/pages.py",
+      "lines": 55,
+      "bytes": 1333,
+      "sha256": "f8ba649b29193b209314092c34076a85d60a6ef5846bdd7d486dc2b1b771c955",
+      "guide": "code/backend__routes__pages.py.md"
+    },
+    {
+      "path": "backend/routes/snapshot.py",
+      "lines": 47,
+      "bytes": 1442,
+      "sha256": "ce1aa07e91b369f0fdf0e86a179754a05b229e7c454991e82e9c7866f371e0cd",
+      "guide": "code/backend__routes__snapshot.py.md"
+    },
+    {
+      "path": "backend/setup_database.py",
+      "lines": 114,
+      "bytes": 4627,
+      "sha256": "acd2963e49f85a843cf366f00fb6ad07983536b49c2f7d7c0858983b0ff1c515",
+      "guide": "code/backend__setup_database.py.md"
+    },
+    {
+      "path": "backend/upgrade_circulation.py",
+      "lines": 19,
+      "bytes": 756,
+      "sha256": "b3052f0b6c92cbdaf162c7184a5a0e1c6cf3588d87a0d2b1b1a54d9832dca617",
+      "guide": "code/backend__upgrade_circulation.py.md"
+    },
+    {
+      "path": "backend/upgrade_reminders.py",
+      "lines": 12,
+      "bytes": 316,
+      "sha256": "5ae40965152f24866bd085fc918f5c495ac41f64b05d5f46575cbde840bcb3ab",
+      "guide": "code/backend__upgrade_reminders.py.md"
+    },
+    {
+      "path": "backend/validation.py",
+      "lines": 113,
+      "bytes": 4235,
+      "sha256": "76bd4c7f13e513e3831cbf347d984c14a691bf34428cca8a4f1c92eee44e200b",
+      "guide": "code/backend__validation.py.md"
+    },
+    {
+      "path": "database/bootstrap.sql",
+      "lines": 18,
+      "bytes": 791,
+      "sha256": "6051b4e40dea9edcf1c853aaa2bec0c65868a2bba85c8db76d1351d272236e94",
+      "guide": "code/database__bootstrap.sql.md"
+    },
+    {
+      "path": "database/circulation_audit_upgrade.sql",
+      "lines": 71,
+      "bytes": 4344,
+      "sha256": "c60cfb881ce28ada2262c58fe38db8e185a96c76b8c45637a52242fa495a5525",
+      "guide": "code/database__circulation_audit_upgrade.sql.md"
+    },
+    {
+      "path": "database/circulation_upgrade.sql",
+      "lines": 125,
+      "bytes": 7772,
+      "sha256": "aa52ff7d3db0dcb2758a9c0e08711f85e4cbb6d3982caa10d6c55cf4b0375f0f",
+      "guide": "code/database__circulation_upgrade.sql.md"
+    },
+    {
+      "path": "database/members_audit.sql",
+      "lines": 325,
+      "bytes": 16880,
+      "sha256": "54ab4e6b6d143229f7506d60e15e372de6d9d381414d46e85148f2236071c978",
+      "guide": "code/database__members_audit.sql.md"
+    },
+    {
+      "path": "database/reminders_upgrade.sql",
+      "lines": 21,
+      "bytes": 860,
+      "sha256": "acf58d2ca5c4f02084102e97afb7e5d17123afcbd90bc67b6d2f249e0a4002bf",
+      "guide": "code/database__reminders_upgrade.sql.md"
+    },
+    {
+      "path": "database/reservations_audit_upgrade.sql",
+      "lines": 48,
+      "bytes": 2299,
+      "sha256": "90574fa34217c0e33f04a323dba60a523b7a9a0147eda3b397113f930fe0aab8",
+      "guide": "code/database__reservations_audit_upgrade.sql.md"
+    },
+    {
+      "path": "database/reservations_upgrade.sql",
+      "lines": 112,
+      "bytes": 8190,
+      "sha256": "1f17dde0815c1ce822a3175f018e746d9d6387b71581705b2a2403cc8b5496a1",
+      "guide": "code/database__reservations_upgrade.sql.md"
+    },
+    {
+      "path": "database/schema/accounts.sql",
+      "lines": 25,
+      "bytes": 994,
+      "sha256": "9fed13f39b6e5619a6d4576f9dc4aab5702674cd5410cfebed80e442ac3ebd29",
+      "guide": "code/database__schema__accounts.sql.md"
+    },
+    {
+      "path": "database/schema/catalogue.sql",
+      "lines": 50,
+      "bytes": 1934,
+      "sha256": "445e1195049df78bd3328bdcc5420280cd79fe71da296affa6aaefbef61a7e6a",
+      "guide": "code/database__schema__catalogue.sql.md"
+    },
+    {
+      "path": "database/schema/circulation.sql",
+      "lines": 90,
+      "bytes": 2950,
+      "sha256": "5d347ca297a9fbc3b593a5735f061980e0b2601fb92e7ac03036ba50ca04f410",
+      "guide": "code/database__schema__circulation.sql.md"
+    },
+    {
+      "path": "database/schema/members.sql",
+      "lines": 97,
+      "bytes": 3805,
+      "sha256": "f78178d8295c9c0562f707c599cbe798221afc72f4d875dd37af16284200682c",
+      "guide": "code/database__schema__members.sql.md"
+    },
+    {
+      "path": "database/schema/reset.sql",
+      "lines": 28,
+      "bytes": 1653,
+      "sha256": "bc38b2fefffda566d125588f7df80ab723aa2d46ad44b6ece2e1ff6905e6674d",
+      "guide": "code/database__schema__reset.sql.md"
+    },
+    {
+      "path": "database/schema/routines.sql",
+      "lines": 64,
+      "bytes": 2061,
+      "sha256": "baf495639a190a5312793365785d9b2d71ce5fd5ed76a98bbf3dada4a6b6b103",
+      "guide": "code/database__schema__routines.sql.md"
+    },
+    {
+      "path": "database/schema/sample_data.sql",
+      "lines": 43,
+      "bytes": 4506,
+      "sha256": "f7cabc4ace507dac06289b26ac70cf3c548472b9a904e42f4926e7d96a277bb3",
+      "guide": "code/database__schema__sample_data.sql.md"
+    },
+    {
+      "path": "database/schema/verify.sql",
+      "lines": 10,
+      "bytes": 310,
+      "sha256": "ffac4c5575c2596414f3a05558b1562c91bf31148a53c5d54962ca149a98aaae",
+      "guide": "code/database__schema__verify.sql.md"
+    },
+    {
+      "path": "database/setup.sql",
+      "lines": 19,
+      "bytes": 555,
+      "sha256": "4270b6666a4f38d02b5649942143935c22d499c78702fba336a55efee1e04e73",
+      "guide": "code/database__setup.sql.md"
+    },
+    {
+      "path": "database/student_activation_upgrade.sql",
+      "lines": 52,
+      "bytes": 3926,
+      "sha256": "85265f8959b1d5eae7b541ca59a1372295e0631d3d0a6d41a9ced866c6fc9b0f",
+      "guide": "code/database__student_activation_upgrade.sql.md"
+    },
+    {
+      "path": "frontend/accounts.html",
+      "lines": 122,
+      "bytes": 4044,
+      "sha256": "79caa915bc7d1184091c337b86346e706d3421fb6ee30f2fa8122f2a839e361d",
+      "guide": "code/frontend__accounts.html.md"
+    },
+    {
+      "path": "frontend/accounts.js",
+      "lines": 96,
+      "bytes": 3812,
+      "sha256": "557460c0eef5eab86881debfc3a117794c2f81e4ec72691ef5c72d4aba99ad5b",
+      "guide": "code/frontend__accounts.js.md"
+    },
+    {
+      "path": "frontend/activate-account.html",
+      "lines": 72,
+      "bytes": 2505,
+      "sha256": "8efa89ea60c41d294926ab64448dfc955740726158d5321518dc14dbae8ce619",
+      "guide": "code/frontend__activate-account.html.md"
+    },
+    {
+      "path": "frontend/activate-account.js",
+      "lines": 40,
+      "bytes": 1603,
+      "sha256": "7242da694ba170797298a28e86bd2ae128d16115a9c72cec2d2c3f0fc2313756",
+      "guide": "code/frontend__activate-account.js.md"
+    },
+    {
+      "path": "frontend/admin.css",
+      "lines": 381,
+      "bytes": 6935,
+      "sha256": "99adb13466cfebceef01151f3beaae11bd9b4487b27ba812e9ecb01b1db81121",
+      "guide": "code/frontend__admin.css.md"
+    },
+    {
+      "path": "frontend/audit.html",
+      "lines": 93,
+      "bytes": 3776,
+      "sha256": "8779ab11c06d7ac3c2c68f29e36ffc2900aa78c8b481c1aeb1318d3de35305b4",
+      "guide": "code/frontend__audit.html.md"
+    },
+    {
+      "path": "frontend/audit.js",
+      "lines": 123,
+      "bytes": 4639,
+      "sha256": "c03e0ca58b4b59d54a9ea90d9decb8400a6968dd44c9457aeae140051fdd1375",
+      "guide": "code/frontend__audit.js.md"
+    },
+    {
+      "path": "frontend/books.html",
+      "lines": 86,
+      "bytes": 3552,
+      "sha256": "d2f2b380c7c5d213fed6548e27225f3ac53dd1d498cad288d821bb990cd66dd2",
+      "guide": "code/frontend__books.html.md"
+    },
+    {
+      "path": "frontend/books.js",
+      "lines": 82,
+      "bytes": 3117,
+      "sha256": "82a0aeed2d6c23c02b62ebe6c46e4f8c5ff5681dabccf549097eddeb8f6bf497",
+      "guide": "code/frontend__books.js.md"
+    },
+    {
+      "path": "frontend/circulation.html",
+      "lines": 72,
+      "bytes": 3257,
+      "sha256": "6aef52c55dcbb97c422b3d21c9eaa38366381382b655d25eb2f35e7597090f91",
+      "guide": "code/frontend__circulation.html.md"
+    },
+    {
+      "path": "frontend/circulation.js",
+      "lines": 181,
+      "bytes": 6371,
+      "sha256": "120b033d3594c2ffe735deec9c2fd1cf7107ed32b291f69af49e2e9ec34cd80b",
+      "guide": "code/frontend__circulation.js.md"
+    },
+    {
+      "path": "frontend/dashboard.js",
+      "lines": 211,
+      "bytes": 9236,
+      "sha256": "2b757af04fad162d976de00f140a44f62d5092342a9b75a7a7950685e27d812d",
+      "guide": "code/frontend__dashboard.js.md"
+    },
+    {
+      "path": "frontend/fines.html",
+      "lines": 94,
+      "bytes": 3594,
+      "sha256": "dbfc21c499b20ba8e9937c34785736a348d7483a481865d01f09f0591ac2cc68",
+      "guide": "code/frontend__fines.html.md"
+    },
+    {
+      "path": "frontend/fines.js",
+      "lines": 216,
+      "bytes": 9458,
+      "sha256": "68652c2588013427d19c4c21d252ed6bd0864071b8cf8cb093919a35865bf399",
+      "guide": "code/frontend__fines.js.md"
+    },
+    {
+      "path": "frontend/forgot-password.html",
+      "lines": 84,
+      "bytes": 2880,
+      "sha256": "685c35823552f64b670396bf511891ed6d831b740a6cc03785ba66f1ad2d6dd2",
+      "guide": "code/frontend__forgot-password.html.md"
+    },
+    {
+      "path": "frontend/forgot-password.js",
+      "lines": 40,
+      "bytes": 1619,
+      "sha256": "50b61f0c96b0eaeea7ea6a53e5a458abaee1d3c699d3ecf5ff473e881809f4d8",
+      "guide": "code/frontend__forgot-password.js.md"
+    },
+    {
+      "path": "frontend/index.html",
+      "lines": 136,
+      "bytes": 5527,
+      "sha256": "edf4fcc0fae1009cf7ed31f44c69debc54fdc053cb7c05aa35adc280806f6baf",
+      "guide": "code/frontend__index.html.md"
+    },
+    {
+      "path": "frontend/login.css",
+      "lines": 314,
+      "bytes": 6233,
+      "sha256": "4e51afcdd4953a2e0d01da45e8298cc3f0a5b114d27c239a816a1cc291f21bb1",
+      "guide": "code/frontend__login.css.md"
+    },
+    {
+      "path": "frontend/login.html",
+      "lines": 76,
+      "bytes": 2614,
+      "sha256": "d99ea8d8d5ccce8ddb848b27de78e496a968d0aa7f2b7e58befc8d642adf3d75",
+      "guide": "code/frontend__login.html.md"
+    },
+    {
+      "path": "frontend/login.js",
+      "lines": 81,
+      "bytes": 3200,
+      "sha256": "4640f41b3c23a5e2a128924151624f56492c8d603f7f5da12563a878171e740c",
+      "guide": "code/frontend__login.js.md"
+    },
+    {
+      "path": "frontend/member-dashboard.js",
+      "lines": 177,
+      "bytes": 9226,
+      "sha256": "393c33a672577cd08f382ed9a937f1f0b68f44b1c63c655d61f8c6cc26d426d3",
+      "guide": "code/frontend__member-dashboard.js.md"
+    },
+    {
+      "path": "frontend/member-navigation.js",
+      "lines": 27,
+      "bytes": 1096,
+      "sha256": "d04c0dc6912a95b727ab77e0c76af4f83e7c9e6ede4020fcecf7640799095422",
+      "guide": "code/frontend__member-navigation.js.md"
+    },
+    {
+      "path": "frontend/notifications.css",
+      "lines": 212,
+      "bytes": 3961,
+      "sha256": "a522d8b934029a11052cdd5aec9a867fca634b9b3e6cdccd19c1dbf9d2916b8d",
+      "guide": "code/frontend__notifications.css.md"
+    },
+    {
+      "path": "frontend/notifications.js",
+      "lines": 238,
+      "bytes": 9881,
+      "sha256": "d09df265bcea3cd19dae8532bcad66c31a99fcb249ad76de4acacb034f4d05bc",
+      "guide": "code/frontend__notifications.js.md"
+    },
+    {
+      "path": "frontend/polish.css",
+      "lines": 237,
+      "bytes": 3943,
+      "sha256": "ebaafd27ce2c6c08d5f9887c1ef50d4f3716cc3b603906f677997a75c53c6d15",
+      "guide": "code/frontend__polish.css.md"
+    },
+    {
+      "path": "frontend/reservation-desk.js",
+      "lines": 50,
+      "bytes": 1916,
+      "sha256": "e4b5571a87f29620b1e57c2c587aecc553684300cfb66d7793f61011390ecfab",
+      "guide": "code/frontend__reservation-desk.js.md"
+    },
+    {
+      "path": "frontend/reservations.html",
+      "lines": 44,
+      "bytes": 1911,
+      "sha256": "86cd13531a0b0f40b2e25875a55b6a50bb1b38a4ca71b8836c35e2d3d76cd08a",
+      "guide": "code/frontend__reservations.html.md"
+    },
+    {
+      "path": "frontend/reservations.js",
+      "lines": 113,
+      "bytes": 3826,
+      "sha256": "ad73a3cc426e35523ebfd280b953b0b952da52936cdc21b4e3dcb3c754c71e45",
+      "guide": "code/frontend__reservations.js.md"
+    },
+    {
+      "path": "frontend/shared.js",
+      "lines": 405,
+      "bytes": 15161,
+      "sha256": "d619d07ada6c58b6f0e5e2c74e0021dc787dfc38dce7a4154aa537379d1b3158",
+      "guide": "code/frontend__shared.js.md"
+    },
+    {
+      "path": "frontend/student.css",
+      "lines": 952,
+      "bytes": 16839,
+      "sha256": "b2d0e55f2ebcf40af0101e793082dd998422218a47910a3882da256112766c7b",
+      "guide": "code/frontend__student.css.md"
+    },
+    {
+      "path": "frontend/student.html",
+      "lines": 226,
+      "bytes": 9806,
+      "sha256": "c552017241acfc4ab33c27e7e4f265eb32267441afe142f784fddc05b6a42bfc",
+      "guide": "code/frontend__student.html.md"
+    },
+    {
+      "path": "frontend/students.html",
+      "lines": 154,
+      "bytes": 5607,
+      "sha256": "f54cb6b9ddbce94dbec972439ee7cecf6cbfce1dc3ce10be6c8d24c42bdec105",
+      "guide": "code/frontend__students.html.md"
+    },
+    {
+      "path": "frontend/students.js",
+      "lines": 110,
+      "bytes": 4250,
+      "sha256": "a698a137e809490f4b6e64c339e6761815e99222af4c4713a7183453e2e43b66",
+      "guide": "code/frontend__students.js.md"
+    },
+    {
+      "path": "frontend/styles.css",
+      "lines": 1030,
+      "bytes": 18223,
+      "sha256": "002d89fdef971b4f52dd4c84f4781ab0857e29bc89adc15b8dbc1f4823927dc1",
+      "guide": "code/frontend__styles.css.md"
+    },
+    {
+      "path": "run.ps1",
+      "lines": 8,
+      "bytes": 338,
+      "sha256": "731d63a51e040db3986c9608b5e17df28169d74afd453e65b74ff5a37cb2f15a",
+      "guide": "code/run.ps1.md"
+    },
+    {
+      "path": "tests/activation.test.cjs",
+      "lines": 89,
+      "bytes": 2726,
+      "sha256": "76db5e8c381baee9b75e0a6bad6e6e0766f279efb19151434f520d63bed1d2b3",
+      "guide": "code/tests__activation.test.cjs.md"
+    },
+    {
+      "path": "tests/activation_oracle.sql",
+      "lines": 38,
+      "bytes": 3124,
+      "sha256": "da142a1935bc55c2c7927fec112d7f87d0f9260a34041010935cc5bc3bf89ddb",
+      "guide": "code/tests__activation_oracle.sql.md"
+    },
+    {
+      "path": "tests/circulation.test.cjs",
+      "lines": 87,
+      "bytes": 2629,
+      "sha256": "fe0346fce7e752b24e969e5b114c0b11e55e561296926282b0c74c95ef25f148",
+      "guide": "code/tests__circulation.test.cjs.md"
+    },
+    {
+      "path": "tests/circulation_oracle.sql",
+      "lines": 104,
+      "bytes": 6448,
+      "sha256": "297bc45b145b2789f9240e8a8115b0b1ecb1b181ee66c83b1b5d6e073e039ac2",
+      "guide": "code/tests__circulation_oracle.sql.md"
+    },
+    {
+      "path": "tests/connection.test.cjs",
+      "lines": 216,
+      "bytes": 7026,
+      "sha256": "10f9f8ee6d796f54fa2ad1e0ab613ccd2daaa635e4ec2bf782fbe8722a010b04",
+      "guide": "code/tests__connection.test.cjs.md"
+    },
+    {
+      "path": "tests/dashboard.test.cjs",
+      "lines": 117,
+      "bytes": 3552,
+      "sha256": "59e1ce32c7530fca926b7c66987b734555abef340ab2802124828dbc6eaafa80",
+      "guide": "code/tests__dashboard.test.cjs.md"
+    },
+    {
+      "path": "tests/fines.test.cjs",
+      "lines": 184,
+      "bytes": 5636,
+      "sha256": "f0607cd1c606e67052001a083e6c1e0b3305cfab7745309e60d955f967810ef3",
+      "guide": "code/tests__fines.test.cjs.md"
+    },
+    {
+      "path": "tests/login.test.cjs",
+      "lines": 116,
+      "bytes": 3515,
+      "sha256": "3a4758bf0861320f1408d41c850247764e74beb5ec861fc983a7b604a8c4b606",
+      "guide": "code/tests__login.test.cjs.md"
+    },
+    {
+      "path": "tests/members.test.cjs",
+      "lines": 66,
+      "bytes": 2153,
+      "sha256": "1a1f6648c9a0a4e01da31543ca13c3d38a9848b69b94b195d22d0f3383c357f8",
+      "guide": "code/tests__members.test.cjs.md"
+    },
+    {
+      "path": "tests/notifications.test.cjs",
+      "lines": 265,
+      "bytes": 9482,
+      "sha256": "b38dfed0cde9b48b1fa93541ae80514b8c203677b3aa86eebd29610713e0f45a",
+      "guide": "code/tests__notifications.test.cjs.md"
+    },
+    {
+      "path": "tests/recovery.test.cjs",
+      "lines": 95,
+      "bytes": 2973,
+      "sha256": "5dc59aafe4a95536f8cea6b9cb3ba718b14a7c6af4e3d975a2abac84a5d9e517",
+      "guide": "code/tests__recovery.test.cjs.md"
+    },
+    {
+      "path": "tests/recovery_oracle.sql",
+      "lines": 39,
+      "bytes": 2894,
+      "sha256": "f252026e83817b58e911484049b753e91174ab13fd75c8d5655109146ad0c21a",
+      "guide": "code/tests__recovery_oracle.sql.md"
+    },
+    {
+      "path": "tests/reservations.test.cjs",
+      "lines": 218,
+      "bytes": 7628,
+      "sha256": "133758eb160ca6f4758c5122f4337f5f40e09efb71e2fa24004c54e848c7ab7a",
+      "guide": "code/tests__reservations.test.cjs.md"
+    },
+    {
+      "path": "tests/reservations_oracle.sql",
+      "lines": 60,
+      "bytes": 4970,
+      "sha256": "f738062bc945260631ed1031b73f47c0c97099faf18c9efa706abf35b38afabd",
+      "guide": "code/tests__reservations_oracle.sql.md"
+    },
+    {
+      "path": "tests/test_academic_session.py",
+      "lines": 27,
+      "bytes": 896,
+      "sha256": "e839fffbc133328e276cae4fae6a643538be2707bfddff6d24bd706664e6b8eb",
+      "guide": "code/tests__test_academic_session.py.md"
+    },
+    {
+      "path": "tests/test_activation.py",
+      "lines": 192,
+      "bytes": 7517,
+      "sha256": "a782902b4e4be629f3cf122c0745ca1a6e430e997e055430b880897c188856e0",
+      "guide": "code/tests__test_activation.py.md"
+    },
+    {
+      "path": "tests/test_circulation.py",
+      "lines": 62,
+      "bytes": 2660,
+      "sha256": "a70084d60875fa8289334befb19fab41ccc8e2ccce3235242efe502a43858fa6",
+      "guide": "code/tests__test_circulation.py.md"
+    },
+    {
+      "path": "tests/test_connection_recovery.py",
+      "lines": 94,
+      "bytes": 4385,
+      "sha256": "befda6c6e2266a4429bec0e36bc9aeac87877adec5d02617f499bc1f61461179",
+      "guide": "code/tests__test_connection_recovery.py.md"
+    },
+    {
+      "path": "tests/test_fine_collection.py",
+      "lines": 27,
+      "bytes": 1231,
+      "sha256": "3e2ec76e9bef7e1972cfe69df75fa02117732b82f2ec3f39c6f6ad50c786d8a3",
+      "guide": "code/tests__test_fine_collection.py.md"
+    },
+    {
+      "path": "tests/test_login_api.py",
+      "lines": 210,
+      "bytes": 8141,
+      "sha256": "b21775cfc02f4f6b300bfcb0082169fbdf37490397ecf15c8efdd6c172500d2f",
+      "guide": "code/tests__test_login_api.py.md"
+    },
+    {
+      "path": "tests/test_members_audit.py",
+      "lines": 169,
+      "bytes": 7095,
+      "sha256": "fb974a623e542bf7fc2a58480e7013420ba00c4fe6a7d091b8491ae3dc235dd6",
+      "guide": "code/tests__test_members_audit.py.md"
+    },
+    {
+      "path": "tests/test_regressions.py",
+      "lines": 144,
+      "bytes": 6034,
+      "sha256": "169725850395cde7b6a9c93d4f453feea61dbd57acac2a95343a5ff14d5dd74b",
+      "guide": "code/tests__test_regressions.py.md"
+    },
+    {
+      "path": "tests/test_reminders.py",
+      "lines": 158,
+      "bytes": 6968,
+      "sha256": "5b80021563f630443932fc28d0c87a08dcad320ac704107c086d22a3169c1550",
+      "guide": "code/tests__test_reminders.py.md"
+    },
+    {
+      "path": "tests/test_reservations.py",
+      "lines": 94,
+      "bytes": 3898,
+      "sha256": "3874c003fcff8e69fef6cc31bcc5fabb4eb88530839c673af4e55485accfdf51",
+      "guide": "code/tests__test_reservations.py.md"
+    },
+    {
+      "path": "frontend/assets/library-dashboard.png",
+      "bytes": 2205142,
+      "sha256": "310bc9441cfc4bc2076583823ea9d08c9b776077a01acdcc1abb6f0e02bff2fa",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/member-image-prompts.md",
+      "bytes": 1527,
+      "sha256": "8b4279de7fa60b8742fef5018fcb5ab94afdd52d31b9299134b7c70a7ec83117",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/member-library-hero.png",
+      "bytes": 2400790,
+      "sha256": "2d7120997bb4aef2b20ca434fdb40139fc96b390bdbb327937a81773105101e8",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/member-library-hero.webp",
+      "bytes": 280996,
+      "sha256": "61c5d847719ab071bc42d48a2acbeef4db3f396631a25c2d3b133d55a680f02c",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/member-reading-desk.png",
+      "bytes": 2073049,
+      "sha256": "982458b23b67f3f42393f6b6faca6b95dede34d16e631549c404681329cfc34a",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/member-reading-desk.webp",
+      "bytes": 169864,
+      "sha256": "6106d35ecdbf1e2acd80a7e6bddd045205333000278c9b7c7adba144181ad038",
+      "type": "binary asset"
+    },
+    {
+      "path": "frontend/assets/pstu-library.jpg",
+      "bytes": 610368,
+      "sha256": "ef5aa41f4e259ebc6b9c272b2a3cbfc436e4b5c8d014fe498d7b46a67a3cba6e",
+      "type": "binary asset"
+    }
+  ],
+  "private_files_excluded": [
+    ".env"
+  ],
+  "generated": "Source code guides + curated chapters; app/database unchanged"
+}

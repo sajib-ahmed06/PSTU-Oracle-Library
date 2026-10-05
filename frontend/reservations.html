@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reservations | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="reservations">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Library desk</p>
+          <h1>Reservations</h1>
+          <p class="heading-copy">
+            Hold a copy for 3 days, issue it on collection, or cancel the hold.
+          </p>
+        </div>
+        <button id="refreshButton" class="button secondary">Refresh</button>
+      </section>
+      <section class="surface form-surface">
+        <h2>Reserve for a member</h2>
+        <form id="reserveForm" class="account-form horizontal-form">
+          <label>Member<select name="studentId" id="reserveMember" required></select></label
+          ><label>Book<select name="bookId" id="reserveBook" required></select></label
+          ><button class="button primary">Reserve for 3 days</button>
+        </form>
+      </section>
+      <section class="toolbar">
+        <strong>Reservations and history</strong
+        ><span id="reservationCount" class="record-count"></span>
+      </section>
+      <section class="surface"><div id="reservationTable" class="table-wrap"></div></section>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/reservation-desk.js?v=modules-1"></script>
+    <script src="/static/reservations.js?v=priority-3"></script>
+  </body>
+</html>

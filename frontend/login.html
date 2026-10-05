@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in | PSTU Central Library</title>
+    <link rel="stylesheet" href="/static/login.css?v=activate-4" />
+  </head>
+  <body>
+    <main class="login-screen">
+      <section class="login-brand">
+        <div class="brand-badge">PSTU</div>
+        <p>Patuakhali Science and Technology University</p>
+        <h1>Central Library<br />Management System</h1>
+        <span>Secure library operations portal</span>
+      </section>
+
+      <section class="login-panel">
+        <form id="loginForm">
+          <div class="form-heading">
+            <span>Authorized access</span>
+            <h2>Welcome back</h2>
+            <p>Sign in to continue to the library dashboard.</p>
+          </div>
+          <label>
+            Member ID / Staff username
+            <input
+              name="username"
+              maxlength="100"
+              autocapitalize="none"
+              spellcheck="false"
+              autocomplete="username"
+              placeholder="PSTU-0001 or staff username"
+              required
+              autofocus
+            />
+          </label>
+          <label>
+            Password
+            <span class="password-field">
+              <input
+                id="password"
+                name="password"
+                maxlength="128"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter password"
+                required
+              />
+              <button
+                id="togglePassword"
+                type="button"
+                aria-label="Show password"
+                aria-controls="password"
+                aria-pressed="false"
+              >
+                Show
+              </button>
+            </span>
+          </label>
+          <p id="loginError" class="login-error" role="alert"></p>
+          <button id="loginButton" class="login-button" type="submit">Sign in</button>
+          <p class="account-link">
+            First time here? <a href="/activate-account">Activate account</a>
+          </p>
+          <p class="account-link">
+            <a href="/forgot-password">Forgot password?</a> <span>Members only</span>
+          </p>
+          <div class="secure-note"><i></i><span>Protected Oracle XE session</span></div>
+        </form>
+      </section>
+    </main>
+    <footer>Developed and Copyright &copy; 2026 by <strong>SAJIB AHMED</strong></footer>
+    <script src="/static/login.js?v=recovery-5"></script>
+  </body>
+</html>

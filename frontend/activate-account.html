@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Activate account | PSTU Library</title>
+    <link rel="stylesheet" href="/static/login.css?v=activate-4" />
+  </head>
+  <body>
+    <main class="login-screen">
+      <section class="login-brand">
+        <div class="brand-badge">PSTU</div>
+        <p>Patuakhali Science and Technology University</p>
+        <h1>Central Library<br />Student Portal</h1>
+        <span>Activate your library account</span>
+      </section>
+      <section class="login-panel">
+        <form id="activationForm">
+          <div class="form-heading">
+            <span>Student access</span>
+            <h2>Activate account</h2>
+            <p>Use your library Member ID and registered phone number to set your password.</p>
+          </div>
+          <label
+            >Member ID<input
+              name="memberId"
+              maxlength="25"
+              placeholder="Example: PSTU-0001"
+              autocomplete="username"
+              required
+              autofocus
+          /></label>
+          <label
+            >Registered phone number<input
+              name="phone"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9]{11}"
+              minlength="11"
+              maxlength="11"
+              placeholder="11-digit registered phone number"
+              autocomplete="tel"
+              required
+          /></label>
+          <label
+            >Set password<input
+              name="password"
+              type="password"
+              minlength="4"
+              maxlength="128"
+              autocomplete="new-password"
+              required
+          /></label>
+          <label
+            >Confirm password<input
+              name="confirmPassword"
+              type="password"
+              minlength="4"
+              maxlength="128"
+              autocomplete="new-password"
+              required
+          /></label>
+          <p id="activationMessage" class="login-error" role="status" aria-live="polite"></p>
+          <button id="activationButton" class="login-button">Activate account</button>
+          <p class="account-link">Already activated? <a href="/login">Sign in</a></p>
+        </form>
+      </section>
+    </main>
+    <footer>Developed and Copyright &copy; 2026 by <strong>SAJIB AHMED</strong></footer>
+    <script src="/static/activate-account.js?v=1"></script>
+  </body>
+</html>

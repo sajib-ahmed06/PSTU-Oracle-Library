@@ -1,0 +1,237 @@
+/* Shared finishing touches for management and member workspaces. */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f3;
+}
+.app-header {
+  min-height: 80px;
+  border-bottom-color: #e4e9e1;
+}
+.brand-mark {
+  border-radius: 12px;
+  box-shadow: 0 5px 14px #123b301a;
+}
+.user-menu button {
+  border-radius: 8px;
+  background: #f7f9f5;
+}
+.main-nav {
+  background: #fff;
+  color: #61725f;
+  box-shadow: 0 3px 12px #233d2410;
+  border-bottom: 1px solid #e3e9df;
+}
+.main-nav a {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+}
+.main-nav a.active {
+  border-bottom-color: #287345;
+  background: #edf4e8;
+  color: #285a37;
+}
+.main-nav a:hover {
+  background: #f0f5ec;
+  color: #285a37;
+}
+.main-nav a:focus-visible,
+a.text-link:focus-visible {
+  outline: 3px solid #9dbb88;
+  outline-offset: -3px;
+}
+.workspace {
+  padding-top: 32px;
+}
+.page-heading {
+  align-items: center;
+  border-bottom-color: #dfe6d9;
+  padding-bottom: 20px;
+  min-height: 106px;
+}
+.page-heading h1 {
+  color: #253d2b;
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -0.6px;
+}
+.heading-copy {
+  line-height: 1.8;
+  color: #73806b;
+}
+.surface,
+.toolbar,
+.command-strip {
+  border-color: #e0e6db;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px #29402404;
+}
+.surface-heading {
+  min-height: 82px;
+  padding: 20px 24px;
+  border-bottom-color: #e8ede3;
+}
+.surface-heading h2 {
+  font-size: 18px;
+  color: #344a31;
+  font-weight: 650;
+}
+.section-label,
+.eyebrow {
+  color: #668259;
+  letter-spacing: 1.5px;
+}
+.toolbar {
+  padding: 17px 22px;
+  gap: 18px;
+}
+.toolbar strong {
+  color: #344b30;
+  font-weight: 650;
+}
+.command-strip {
+  padding: 20px 24px;
+  border-left: 4px solid #6e9659;
+}
+.button {
+  border-radius: 8px;
+  font-size: 12px;
+}
+.button.secondary {
+  background: #fff;
+  border-color: #dce5d6;
+  color: #52644a;
+}
+.button.secondary:hover {
+  background: #f1f5eb;
+}
+.button.primary {
+  background: #215e3d;
+  box-shadow: 0 3px 8px #214f3012;
+}
+.button.primary:hover {
+  background: #174b2e;
+}
+input,
+select {
+  border-radius: 8px;
+  border-color: #dce4d6;
+  background: #fcfdf9;
+}
+.metric {
+  border-radius: 12px;
+  border-top-width: 2px;
+  border-color: #e0e6dc;
+  box-shadow: none;
+  padding: 21px;
+}
+.metric strong {
+  color: #2e4931;
+  font-weight: 650;
+}
+.metric span {
+  color: #75846c;
+}
+.metric small {
+  color: #8b9783;
+  line-height: 1.6;
+}
+th {
+  background: #f6f8f2;
+  color: #7a8b71;
+  border-bottom-color: #e8ede3;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+td {
+  border-bottom-color: #edf1e8;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  color: #4b5c44;
+}
+tbody tr:hover {
+  background: #f9fbf5;
+}
+.pill {
+  padding: 6px 10px;
+}
+.empty-state {
+  gap: 9px;
+  align-content: center;
+}
+.empty-state span {
+  margin-top: 0;
+}
+.modal form {
+  border-radius: 16px;
+  padding: 28px;
+}
+.modal-heading {
+  padding-bottom: 19px;
+}
+.modal-heading h2 {
+  color: #314b33;
+}
+.account-form label {
+  color: #64755b;
+}
+.form-note {
+  line-height: 1.8;
+  color: #7b8871;
+}
+.form-surface {
+  padding: 24px;
+}
+.form-surface > h2 {
+  margin-bottom: 12px;
+  color: #344b30;
+}
+.form-surface .account-form {
+  padding: 12px 0 0;
+}
+#reserveForm.horizontal-form {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+}
+#reserveForm select {
+  width: 100%;
+  display: block;
+  margin-top: 7px;
+}
+.app-footer {
+  border-top-color: #e5eade;
+}
+@media (max-width: 700px) {
+  .page-heading {
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .page-heading h1 {
+    font-size: 25px;
+  }
+  .toolbar {
+    padding: 16px;
+  }
+  .surface-heading {
+    padding: 18px;
+  }
+  .command-strip {
+    padding: 18px;
+  }
+  .form-surface {
+    padding: 18px;
+  }
+  #reserveForm.horizontal-form {
+    grid-template-columns: 1fr;
+  }
+  .modal form {
+    padding: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

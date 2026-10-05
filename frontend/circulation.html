@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Circulation | PSTU Library</title>
+    <link rel="stylesheet" href="/static/styles.css?v=members-audit-1" />
+    <link rel="stylesheet" href="/static/polish.css?v=1" />
+    <link rel="stylesheet" href="/static/notifications.css?v=due-2" />
+  </head>
+  <body data-page="circulation">
+    <div id="appHeader"></div>
+    <main class="workspace">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Circulation</p>
+          <h1>Issue and return</h1>
+          <p class="heading-copy">Track every borrowing transaction in date order.</p>
+        </div>
+        <button class="button primary" data-open="issueModal">Issue book</button>
+      </section>
+      <section class="toolbar">
+        <label class="filter-field"
+          ><span>Show records</span
+          ><select id="issueFilter">
+            <option value="ALL">All transactions</option>
+            <option value="ISSUED">Currently issued</option>
+            <option value="RETURNED">Returned</option>
+          </select></label
+        ><span class="record-count" id="issueCount"></span>
+      </section>
+      <section class="surface"><div class="table-wrap" id="issueTable"></div></section>
+    </main>
+    <div class="modal" id="issueModal" aria-hidden="true">
+      <form data-kind="issue">
+        <div class="modal-heading">
+          <div>
+            <span class="section-label">New transaction</span>
+            <h2>Issue book</h2>
+          </div>
+          <button type="button" class="icon-button cancel" aria-label="Close">&times;</button>
+        </div>
+        <label
+          >Find member<input
+            id="issueMemberSearch"
+            type="search"
+            placeholder="Search by ID, name or department"
+            autocomplete="off" /></label
+        ><label
+          >Eligible member<select name="studentId" id="studentOptions" required></select
+        ></label>
+        <p class="form-note" id="eligibilityNote"></p>
+        <p class="form-note" id="loanAllowance"></p>
+        <p class="form-note">Books are due 15 days after the issue date.</p>
+        <label>Book 1<select name="bookId" id="bookOptions" required></select></label
+        ><label>Physical copy<select name="copyId" id="copyOptions" required></select></label>
+        <label>Book 2 (optional)<select name="bookId2" id="bookOptions2"></select></label
+        ><label>Physical copy<select name="copyId2" id="copyOptions2"></select></label>
+        <label>Book 3 (optional)<select name="bookId3" id="bookOptions3"></select></label
+        ><label>Physical copy<select name="copyId3" id="copyOptions3"></select></label>
+        <div class="form-actions">
+          <button type="button" class="button secondary cancel">Cancel</button
+          ><button class="button primary">Issue selected copies</button>
+        </div>
+      </form>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/static/notifications.js?v=reminders-4"></script>
+    <script src="/static/shared.js?v=priority-3"></script>
+    <script src="/static/circulation.js?v=copy-3"></script>
+  </body>
+</html>
